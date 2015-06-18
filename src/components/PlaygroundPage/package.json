@@ -1,0 +1,6 @@
+{
+  "name": "PlaygroundPage",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./PlaygroundPage.js"
+}

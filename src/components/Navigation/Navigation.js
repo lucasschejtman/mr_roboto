@@ -10,6 +10,7 @@ class Navigation {
     return (
       <div className={classNames(this.props.className, 'Navigation')} role="navigation">
         <a className="Navigation-link" href="/" onClick={Link.handleClick}>Home</a>
+        <a className="Navigation-link" href="/playground" onClick={Link.handleClick}>Playground</a>
         <a className="Navigation-link" href="/docs" onClick={Link.handleClick}>Docs</a>
       </div>
     );

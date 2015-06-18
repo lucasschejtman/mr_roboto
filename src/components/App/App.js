@@ -6,9 +6,10 @@ import AppActions from '../../actions/AppActions';
 import AppStore from '../../stores/AppStore';
 import Header from '../Header';
 import ContentPage from '../ContentPage';
+import PlaygroundPage from '../PlaygroundPage';
 import NotFoundPage from '../NotFoundPage';
 
-const pages = { ContentPage, NotFoundPage };
+const pages = { ContentPage, PlaygroundPage, NotFoundPage };
 
 @withContext
 @withStyles(styles)
@@ -39,6 +40,9 @@ class App {
         let page = AppStore.getPage(this.props.path);
         component = React.createElement(pages[page.component], page);
         break;
+      case '/playground':
+        component = <PlaygroundPage />;
+      break;
     }
 
     return component ? (
