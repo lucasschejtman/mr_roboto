@@ -66,6 +66,7 @@ synchronized browsing across multiple devices and browsers.
 $ gulp build --release          # Builds the project in release mode
 $ gulp deploy                   # or, `gulp deploy --production`
 ```
+Use hosting providers that support Git-based deployments
 
 ### How to Test
 
