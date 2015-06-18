@@ -137,9 +137,3 @@ gulp.task('sync', ['serve'], cb => {
     browserSync.reload(path.relative(__dirname, file.path));
   });
 });
-
-gulp.task('deploy', cb => {
-  const push = require('git-push');
-  const remote = 'https://github.com/lucasschejtman/mr_roboto';
-  push('./build', remote, cb);
-});
