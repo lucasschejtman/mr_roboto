@@ -5,7 +5,7 @@
 > library and [Flux](http://facebook.github.io/flux/) architecture.
 > bootstraped with the [React Stater Kit](https://github.com/kriasoft/react-starter-kit).
 
-**Demo**: Soon
+**Demo**: https://lit-wildwood-2229.herokuapp.com/
 
 ### What you'll find in here
 
