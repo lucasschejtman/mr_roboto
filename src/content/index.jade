@@ -3,4 +3,41 @@ title: Toy Robot Simulation
 component: ContentPage
 ---
 p.
-  Welcome to the exercise, you can stop by the docs or go straight to the playgound to see the end result 
+  Description
+p.
+  The application is a simulation of a toy robot moving on a square tabletop, of dimensions 5 units x 5 units.
+
+  There are no other obstructions on the table surface.
+
+  The robot is free to roam around the surface of the table, but must be prevented from falling to destruction. Any movement that would result in the robot falling from the table must be prevented, however further valid movement commands must still be allowed.
+
+  Create an application that can read in commands of the following form –
+
+p.
+  PLACE X,Y,F
+p.
+  MOVE
+p.
+  LEFT
+p.
+  RIGHT
+p.
+  REPORT
+p.
+  PLACE will put the toy robot on the table in position X,Y and facing NORTH, SOUTH, EAST or WEST.
+p.
+  The origin (0,0) can be considered to be the SOUTH WEST most corner.
+p.
+  The first valid command to the robot is a PLACE command, after that, any sequence of commands may be issued, in any order, including another PLACE command. The application should discard all commands in the sequence until a valid PLACE command has been executed.
+p.
+  MOVE will move the toy robot one unit forward in the direction it is currently facing.
+p.
+  LEFT and RIGHT will rotate the robot 90 degrees in the specified direction without changing the position of the robot.
+p.
+  REPORT will announce the X,Y and F of the robot. This can be in any form, but standard output is sufficient.
+p.
+  A robot that is not on the table can choose the ignore the MOVE, LEFT, RIGHT and REPORT commands.
+p.
+  Input can be from a file, or from standard input, as the developer chooses.
+p.
+  Provide test data to exercise the application.

@@ -36,7 +36,6 @@ class App {
 
     switch (this.props.path) {
       case '/':
-      case '/docs':
         let page = AppStore.getPage(this.props.path);
         component = React.createElement(pages[page.component], page);
         break;

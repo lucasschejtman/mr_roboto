@@ -3,7 +3,7 @@
 > This project is an [isomorphic](http://nerds.airbnb.com/isomorphic-javascript-future-web-apps/)
 > web application (SPA) based on Facebook's [React](https://facebook.github.io/react/)
 > library and [Flux](http://facebook.github.io/flux/) architecture.
-> bootstraped with the [React Stater Kit](https://github.com/kriasoft/react-starter-kit).
+> bootstraped with [RSK](https://github.com/kriasoft/react-starter-kit).
 
 **Demo**: https://lit-wildwood-2229.herokuapp.com/
 
@@ -44,8 +44,14 @@ $ npm install
 
 ### How to Build
 
+This is using the new babel convetion for gulp. In case of having gulp installed and getting a 'missing gulpfile' error update your global gulp
+
 ```shell
-$ gulp build                    # or, `gulp build --release`
+$ npm update -g gulp
+```
+
+```shell
+$ gulp build
 ```
 
 By default, it builds in debug mode. If you need to build in release mode, add
@@ -54,25 +60,8 @@ By default, it builds in debug mode. If you need to build in release mode, add
 ### How to Run
 
 ```shell
-$ gulp                          # or, `gulp --release`
+$ gulp
 ```
 
 This will start a lightweight development server with LiveReload and
 synchronized browsing across multiple devices and browsers.
-
-### How to Deploy
-
-```shell
-$ gulp build --release          # Builds the project in release mode
-$ gulp deploy                   # or, `gulp deploy --production`
-```
-Use hosting providers that support Git-based deployments
-
-### How to Test
-
-Run unit tests powered by [Jest](https://facebook.github.io/jest/) with the following
-[npm](https://www.npmjs.org/doc/misc/npm-scripts.html) command:
-
-```shell
-$ npm test
-```
