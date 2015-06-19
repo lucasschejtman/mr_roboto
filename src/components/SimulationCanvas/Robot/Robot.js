@@ -44,6 +44,8 @@ class Robot {
   };
 
   move() {
+    if(!this.hasPlace) { this.commandComplete(); }
+
     let direction = (this.image.get('angle') / 90) % 4 + 1;
     let orientation = (direction % 2) === 0 ? 'top' : 'left';
     let futureMove = this._canPerformMove(orientation, direction); // eslint-disable-line no-underscore-dangle
@@ -61,20 +63,27 @@ class Robot {
   };
 
   left() {
+    if(!this.hasPlace) { this.commandComplete(); }
+
     this._rotate(this.image.get('angle') - this.turnAngle); // eslint-disable-line no-underscore-dangle
   };
 
   right() {
+    if(!this.hasPlace) { this.commandComplete(); }
+
     this._rotate(this.image.get('angle') + this.turnAngle); // eslint-disable-line no-underscore-dangle
   };
 
   report() {
+    if(!this.hasPlace) { this.commandComplete(); }
+
     var coords = {
       x: (this.image.left - (this.stepSize / 2)) / this.stepSize,
       y: (this.yMaxBoundary - (this.image.top + (this.stepSize / 2))) / this.stepSize,
       o: Orientation.find(o => +o.angle === 360 - +this.image.angle).name
     };
-    console.log(coords);
+    alert('Output: ' + coords.x + ',' + coords.y + ',' + coords.o);
+    this.commandComplete();
   };
 
   _rotate(angle) {
