@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react'; // eslint-disable-line no-unused-vars
 import styles from './PlaygroundPage.less'; // eslint-disable-line no-unused-vars
 import withStyles from '../../decorators/withStyles'; // eslint-disable-line no-unused-vars
 import SimulationCanvas from '../SimulationCanvas';
+import SimulationSettings from '../SimulationSettings';
 
 @withStyles(styles)
 class PlaygroundPage {
@@ -26,7 +27,7 @@ class PlaygroundPage {
           <div className="panel panel-default">
             <div className="panel-heading">Settings</div>
               <div className="panel-body">
-                <SimulationCanvas />
+                <SimulationSettings />
               </div>
             </div>
         </div>
